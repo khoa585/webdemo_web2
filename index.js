@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/Db_Products');
+mongoose.connect('mongodb://mongodb+srv://hoduykhoa:<titikakatika2207n>@cluster0-r5mbr.gcp.mongodb.net/test?retryWrites=true&w=majority/Db_Products');
 const router = express.Router()
 const bodyParser = require('body-parser')
 app.use(bodyParser.json()) 
