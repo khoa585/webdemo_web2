@@ -1,4 +1,7 @@
 var Product = require('../../Models/Db_Product');
+module.exports.index = async (req,res) => {
+	res.send("hello")
+}
 module.exports.Products = async (req,res) => {
 	var Products = await Product.find();
 	res.json(Products);
