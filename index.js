@@ -3,7 +3,7 @@ const app = express();
 var mongoose = require('mongoose');
 try {
    mongoose.connect('mongodb+srv://hoduykhoa:titikakatika2207n@cluster0-r5mbr.gcp.mongodb.net/test?retryWrites=true&w=majority', { useNewUrlParser: true ,useUnifiedTopology: true },(erro)=>{
-       if(error){
+       if(erro){
            console.log("Erro Connect To DB");
            console.log(erro);
        }else{
