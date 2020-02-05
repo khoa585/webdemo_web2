@@ -2,16 +2,16 @@ const express = require("express");
 const app = express();
 var mongoose = require('mongoose');
 try {
-   mongoose.connect('mongodb+srv://hoduykhoa:titikakatika2207n@cluster0-r5mbr.gcp.mongodb.net/test?retryWrites=true&w=majority', { useNewUrlParser: true ,useUnifiedTopology: true },(erro)=>{
-       if(erro){
+   	mongoose.connect('mongodb+srv://hoduykhoa:titikakatika2207n@cluster0-r5mbr.gcp.mongodb.net/test?retryWrites=true&w=majority', { useNewUrlParser: true ,useUnifiedTopology: true ,useFindAndModify: false,useCreateIndex: true},(erro)=>{
+       	if(erro){
            console.log("Erro Connect To DB");
            console.log(erro);
-       }else{
+       	}else{
            console.log("Connected to DB");
-       }
-   });
-} catch (error) {
-        handleError(error); 
+       	}
+   	});
+	} catch (error) {
+        	handleError(error); 
 }
 const router = express.Router()
 const bodyParser = require('body-parser')
