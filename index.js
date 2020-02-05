@@ -11,7 +11,6 @@ try {
        }
    });
 } catch (error) {
-  
         handleError(error); 
 }
 const router = express.Router()
