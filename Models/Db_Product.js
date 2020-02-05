@@ -5,5 +5,5 @@ var Db_pdSchema = new mongoose.Schema({
 	description : String,
 	price: String
 });
-var Db_Product = mongoose.model('Db_Product',Db_pdSchema,'Db_Products');
+var Db_Product = mongoose.model('products',Db_pdSchema,'products');
 module.exports = Db_Product;

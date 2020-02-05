@@ -1,7 +1,19 @@
 const express = require("express");
 const app = express();
 var mongoose = require('mongoose');
-mongoose.connect('mongodb:mongodb+srv://hoduykhoa:<password>@cluster0-r5mbr.gcp.mongodb.net/test?retryWrites=true&w=majority');
+try {
+   mongoose.connect('mongodb+srv://hoduykhoa:titikakatika2207n@cluster0-r5mbr.gcp.mongodb.net/test?retryWrites=true&w=majority', { useNewUrlParser: true ,useUnifiedTopology: true },(erro)=>{
+       if(error){
+           console.log("Erro Connect To DB");
+           console.log(erro);
+       }else{
+           console.log("Connected to DB");
+       }
+   });
+} catch (error) {
+  
+        handleError(error); 
+}
 const router = express.Router()
 const bodyParser = require('body-parser')
 app.use(bodyParser.json()) 
