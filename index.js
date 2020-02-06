@@ -2,18 +2,7 @@ require('dotenv').config()
 const express = require("express");
 const app = express();
 var mongoose = require('mongoose');
-try {
-   	mongoose.connect(process.env.DATABASE_URL,{useNewUrlParser:true, useUnifiedTopology: true },(erro)=>{
-       	if(erro){
-           console.log("Erro Connect To DB");
-           console.log(erro);
-       	}else{
-           console.log("Connected to DB");
-       	}
-   	});
-	} catch (error) {
-        	handleError(error); 
-}
+mongoose.connect(process.env.DATABASE_URL,{useNewUrlParser:true, useUnifiedTopology: true }
 const router = express.Router()
 const bodyParser = require('body-parser')
 app.use(bodyParser.json()) 
