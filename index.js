@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 var mongoose = require('mongoose');
 try {
-   	mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true ,useUnifiedTopology: true ,useFindAndModify: false,useCreateIndex: true},(erro)=>{
+   	mongoose.connect(process.env.DATABASE_URL,{useNewUrlParser:true, useUnifiedTopology: true },(erro)=>{
        	if(erro){
            console.log("Erro Connect To DB");
            console.log(erro);
