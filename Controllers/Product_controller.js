@@ -1,7 +1,10 @@
 var Product = require('./../Models/Db_Product');
 let ResponsiveHelper = require('./../commons/ResponsiveHelper');
 module.exports.Products = async function (req, res) {
-		console.log(req.user)
+		const a = req.user
+		a.map((test)=>{
+			console.log(test._id);
+		})	
 		var Products = await Product.find();
 		res.json(Products);
 }

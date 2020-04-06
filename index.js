@@ -37,9 +37,8 @@ try {
 const port = process.env.PORT;
 const router = require('./Router/Product_router')
 app.use(async (req, res, next) => {
-	console.log(req.isAuthenticated())
 	if (req.isAuthenticated()) {
-		console.log(req.isAuthenticated())
+		console.log(req.session.cookie)
 	}
 	next();
 })
